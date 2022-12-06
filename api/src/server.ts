@@ -4,7 +4,7 @@ class AppServer {
   constructor(private app: Application) {}
 
   init() {
-    this.app.start();
+    return this.app.start();
   }
 }
 

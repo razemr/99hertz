@@ -8,12 +8,11 @@
     "baseUrl": "./src",
     "paths": {
       "@controllers/*": ["controllers/*"],
-      "@models/*": ["models/*"],
       "@routes/*": ["routes/*"],
       "@utils/*": ["utils/*"],
-      "@services/*": ["services/*"]
+      "@services/*": ["services/*"],
+      "@schemas/*": ["schemas/*"],
     },
-    "typeRoots": ["./src/index.d.ts"],
     "declaration": false,
     "outDir": "./dist",
     "esModuleInterop": true,

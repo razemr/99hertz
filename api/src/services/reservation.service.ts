@@ -1,10 +1,11 @@
 import fs from 'fs';
 import path from 'path';
-
-import { Reservation } from 'interfaces';
 import { randomUUID } from 'crypto';
 
-const filePath = path.resolve(__dirname, '../../data/reservations.json');
+import { Reservation } from 'interfaces';
+import { Config } from '../config';
+
+const filePath = path.resolve(__dirname, `../../data/${Config.fileName}`);
 
 export class ReservationService {
   static async list(): Promise<Reservation[]> {
@@ -23,7 +24,7 @@ export class ReservationService {
     const reservations = await getReservations();
     await saveReservations(
       reservations.map(r => {
-        return r.id === id ? {...r, ...reservation} : r;
+        return r.id === id ? { ...r, ...reservation } : r;
       }),
     );
   }

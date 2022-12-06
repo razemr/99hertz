@@ -1,5 +1,5 @@
 export interface Reservation {
-  id: string;
+  id?: string;
   vehicleId: string;
   from: Date;
   to: Date;

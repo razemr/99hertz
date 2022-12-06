@@ -2,8 +2,8 @@ import { Router } from 'express';
 
 import { BaseRoutes } from './base.routes';
 import { ReservationController } from '@controllers/reservation.controller';
-import { createReservationSchema } from 'schemas/createReservation.schema';
-import { updateReservationSchema } from 'schemas/updateReservation.schema';
+import { createReservationSchema } from '@schemas/createReservation.schema';
+import { updateReservationSchema } from '@schemas/updateReservation.schema';
 
 export class ReservationRoutes extends BaseRoutes {
   private controller: ReservationController;

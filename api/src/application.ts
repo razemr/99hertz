@@ -4,7 +4,7 @@ import morgan from 'morgan';
 import 'express-async-errors';
 import { StatusCodes } from 'http-status-codes';
 
-import { Environment } from 'environment';
+import { Environment } from './environment';
 import { LogService } from '@services/log.service';
 import { ApiError } from '@utils/apiError';
 import { ApiResponse } from '@utils/apiResponse';
@@ -12,7 +12,7 @@ import { ReservationRoutes } from '@routes/reservation.routes';
 import { ValidationError } from 'express-json-validator-middleware';
 
 export class Application {
-  private server: express.Application;
+  server: express.Application;
 
   constructor() {
     this.server = express();

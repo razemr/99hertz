@@ -1,5 +1,5 @@
 import winston from 'winston';
-import { Environment } from 'environment';
+import { Environment } from '../environment';
 
 export const LogService = winston.createLogger({
   level: Environment.isDevelopment ? 'debug' : 'warn',
